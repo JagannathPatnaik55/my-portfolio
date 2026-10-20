@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f2ed" />
+    <meta name="description" content="Jagannath Patnaik is a Java full-stack developer focused on backend services, APIs, and thoughtful user experiences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jagannath Patnaik — Java Full-Stack Developer" />
+    <meta property="og:description" content="Backend engineering with a full-stack point of view." />
+    <meta name="twitter:card" content="summary" />
+    <title>Jagannath Patnaik — Java Full-Stack Developer</title>
+    <script>
+      let initialTheme = window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      try {
+        const savedTheme = localStorage.getItem("jagannath-portfolio-theme");
+        if (savedTheme === "dark" || savedTheme === "light") initialTheme = savedTheme;
+      } catch {}
+      document.documentElement.dataset.theme = initialTheme;
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="scene-background" aria-hidden="true">
+      <canvas id="scene-canvas"></canvas>
+      <div class="scene-background__wash"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Jagannath Patnaik, home">
+          <span class="brand__mark" aria-hidden="true">JP<span>.</span></span>
+          <span class="brand__name">Jagannath Patnaik</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          <a class="nav-link is-active" href="#home" aria-current="location">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.5A8 8 0 0 1 8.5 3.8 8.3 8.3 0 1 0 20.2 15.5Z" /></svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></svg>
+            <span class="theme-toggle__label">Dark</span>
+          </button>
+          <a class="nav-link nav-link--contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="home" data-scene="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__rule"></span> JAVA FULL-STACK DEVELOPER</p>
+          <h1 id="hero-title">Backend systems.<br /><span class="hero__second-line">Full-stack <span class="accent-text">perspective.</span></span></h1>
+          <p class="hero__intro">I’m Jagannath Patnaik. I work across Java services, APIs, and the interfaces around them—bringing a clear product view to backend engineering.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Explore engineering concepts <span aria-hidden="true">↘</span></a>
+            <a class="button button--text" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero__note"><span class="hero__note-mark" aria-hidden="true">01</span> Java · Spring Boot · REST APIs</p>
+        </div>
+
+        <div class="system-card" role="group" aria-label="Illustrative service flow">
+          <div class="system-card__header">
+            <span class="eyebrow">A SYSTEMS VIEW</span>
+            <span class="system-card__index">FIG. 01</span>
+          </div>
+          <div class="system-flow" aria-label="Request flows from an API contract through a service layer to a data layer">
+            <div class="system-node system-node--api"><span class="system-node__symbol" aria-hidden="true">/</span><span><b>API contract</b><small>Clear request boundaries</small></span></div>
+            <span class="system-flow__connector" aria-hidden="true"><i></i></span>
+            <div class="system-node system-node--service"><span class="system-node__symbol" aria-hidden="true">{ }</span><span><b>Service layer</b><small>Focused domain logic</small></span></div>
+            <span class="system-flow__connector" aria-hidden="true"><i></i></span>
+            <div class="system-node system-node--data"><span class="system-node__symbol" aria-hidden="true">▤</span><span><b>Data layer</b><small>Consistent persistence</small></span></div>
+          </div>
+          <div class="system-card__footer"><span>One useful way to think about a service</span><span aria-hidden="true">↗</span></div>
+          <div class="system-card__stamp" aria-hidden="true">DESIGN<br />WITH<br />INTENT</div>
+        </div>
+        <a class="scroll-cue" href="#about"><span class="scroll-cue__arrow" aria-hidden="true">↓</span> A LITTLE MORE ABOUT ME</a>
+      </section>
+
+      <section class="section-shell about-section" id="about" data-scene="about" aria-labelledby="about-title">
+        <div class="section-kicker"><p class="eyebrow"><span>01</span> / ABOUT</p><span class="section-kicker__line"></span></div>
+        <div class="about-grid">
+          <div class="about-lead">
+            <h2 id="about-title">Good engineering is <span class="accent-text">felt</span> in the details.</h2>
+            <p class="about-lead__summary">Reliable behavior, clear boundaries, and a product experience that makes sense from end to end.</p>
+          </div>
+          <div class="about-copy">
+            <p>My work centers on Java and backend development, with a full-stack view of how services connect to the people using them.</p>
+            <p>I’m interested in building software that stays understandable as it grows: simple contracts, deliberate data flows, and interfaces that make capabilities easy to use.</p>
+            <div class="about-principles" aria-label="Engineering principles">
+              <span><b>01</b> Make the boundaries clear</span>
+              <span><b>02</b> Keep the behavior dependable</span>
+              <span><b>03</b> Design for the whole feature</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell work-section" id="projects" data-scene="projects" aria-labelledby="work-title">
+        <div class="section-kicker"><p class="eyebrow"><span>02</span> / ENGINEERING CONCEPTS</p><span class="section-kicker__line"></span></div>
+        <div class="section-title-row">
+          <div><h2 id="work-title">Systems worth <span class="accent-text">thinking through.</span></h2><p>Illustrative concepts, presented as architecture exercises—not shipped client projects.</p></div>
+          <span class="section-aside">CONCEPT STUDIES<br />01 — 03</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-project="commerce">
+            <div class="project-card__visual project-card__visual--commerce" aria-hidden="true">
+              <span class="visual-label">COMMERCE / SERVICE BOUNDARIES</span>
+              <div class="commerce-diagram"><span>ORDERS</span><i></i><span>PAYMENTS</span><i></i><span>INVENTORY</span></div>
+              <div class="visual-orbit visual-orbit--one"></div><div class="visual-orbit visual-orbit--two"></div>
+              <span class="visual-caption">EVENT-DRIVEN CONCEPT</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>CONCEPT 01</span><span>PLATFORM</span></div>
+              <h3>Commerce Control Plane</h3>
+              <p>A reference design for coordinating order, payment, and inventory workflows across service boundaries.</p>
+              <div class="tag-list"><span>Java</span><span>Spring Boot</span><span>Microservices</span></div>
+              <div class="project-card__actions">
+                <button class="text-link" type="button" data-architecture="commerce">View system sketch <span aria-hidden="true">↗</span></button>
+                <button class="text-link" type="button" data-contact-intent="I'd like to discuss the Commerce Control Plane concept.">Discuss this concept <span aria-hidden="true">↗</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="stream">
+            <div class="project-card__visual project-card__visual--stream" aria-hidden="true">
+              <span class="visual-label">EVENTS / DATA FLOW</span>
+              <div class="stream-grid"></div><div class="stream-line stream-line--one"></div><div class="stream-line stream-line--two"></div>
+              <div class="stream-core"><span>EVENT</span><b>FLOW</b></div><span class="stream-point stream-point--one"></span><span class="stream-point stream-point--two"></span>
+              <span class="visual-caption">INGEST → PROCESS → DELIVER</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>CONCEPT 02</span><span>DATA</span></div>
+              <h3>Signal Event Gateway</h3>
+              <p>A reference design for shaping event ingestion, consumer boundaries, retries, and delivery visibility.</p>
+              <div class="tag-list"><span>Java</span><span>REST APIs</span><span>Microservices</span></div>
+              <div class="project-card__actions">
+                <button class="text-link" type="button" data-architecture="stream">View system sketch <span aria-hidden="true">↗</span></button>
+                <button class="text-link" type="button" data-contact-intent="I'd like to discuss the Signal Event Gateway concept.">Discuss this concept <span aria-hidden="true">↗</span></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="fleet">
+            <div class="project-card__visual project-card__visual--fleet" aria-hidden="true">
+              <span class="visual-label">OPERATIONS / SERVICE HEALTH</span>
+              <div class="fleet-map"><span class="map-route map-route--a"></span><span class="map-route map-route--b"></span><span class="map-point map-point--a"></span><span class="map-point map-point--b"></span><span class="map-point map-point--c"></span></div>
+              <div class="fleet-card"><span class="fleet-card__pulse"></span><span>Operations service map</span><span class="fleet-card__dots">•••</span></div>
+              <span class="visual-caption">CONNECTED SYSTEMS</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>CONCEPT 03</span><span>OPERATIONS</span></div>
+              <h3>FleetOps Service Suite</h3>
+              <p>A reference design for separating telemetry intake, operational workflows, and a clear user-facing view.</p>
+              <div class="tag-list"><span>Java</span><span>REST APIs</span><span>Frontend UI</span></div>
+              <div class="project-card__actions">
+                <button class="text-link" type="button" data-architecture="fleet">View system sketch <span aria-hidden="true">↗</span></button>
+                <button class="text-link" type="button" data-contact-intent="I'd like to discuss the FleetOps Service Suite concept.">Discuss this concept <span aria-hidden="true">↗</span></button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="content-note"><span aria-hidden="true">↳</span> Replace these concept studies with verified projects and real repository or demo links when available.</p>
+      </section>
+
+      <section class="section-shell skills-section" id="skills" data-scene="about" aria-labelledby="skills-title">
+        <div class="section-kicker"><p class="eyebrow"><span>03</span> / TOOLKIT</p><span class="section-kicker__line"></span></div>
+        <div class="skills-grid">
+          <div class="skills-intro">
+            <h2 id="skills-title">The tools behind <span class="accent-text">the work.</span></h2>
+            <p>A practical stack across backend services, data, delivery, and user-facing software.</p>
+          </div>
+          <div class="skill-groups">
+            <div class="skill-group"><span class="skill-group__number">01</span><div><h3>Backend &amp; APIs</h3><div class="tag-list"><span>Core Java</span><span>Spring Boot</span><span>Microservices</span><span>REST APIs</span></div></div></div>
+            <div class="skill-group"><span class="skill-group__number">02</span><div><h3>Data</h3><div class="tag-list"><span>SQL</span><span>NoSQL</span></div></div></div>
+            <div class="skill-group"><span class="skill-group__number">03</span><div><h3>Build &amp; delivery</h3><div class="tag-list"><span>Docker</span><span>CI/CD</span></div></div></div>
+            <div class="skill-group"><span class="skill-group__number">04</span><div><h3>Product interface</h3><div class="tag-list"><span>Frontend UI</span></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell contact-section" id="contact" data-scene="contact" aria-labelledby="contact-title">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow"><span class="eyebrow__rule"></span> 04 / CONTACT</p>
+            <h2 id="contact-title">Have a system to <span class="accent-text">make clearer?</span></h2>
+            <p>Share a little about the idea, opportunity, or problem you’re working through.</p>
+            <div class="contact-links" id="contact-links" aria-label="Contact links" hidden></div>
+            <p class="contact-note">The form prepares a message in your email app. It does not send or store your information.</p>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <label for="contact-name">Your name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Name" required minlength="2" />
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="A few details about what you have in mind…" required minlength="10"></textarea>
+            <p class="form-status" id="form-status" role="status" aria-live="polite">The message draft needs a recipient address before launch.</p>
+            <button class="button button--primary contact-submit" type="submit">Prepare email draft <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="brand brand--footer" href="#home"><span class="brand__mark" aria-hidden="true">JP<span>.</span></span><span class="brand__name">Jagannath Patnaik</span></a>
+      <span class="footer-note">Backend engineering · Full-stack perspective</span>
+      <a class="back-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
+      <span class="copyright">© <span id="current-year">2026</span> JAGANNATH PATNAIK</span>
+    </footer>
+
+    <dialog class="architecture-dialog" id="architecture-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+      <form method="dialog"><button type="submit" class="dialog-close" aria-label="Close system sketch">×</button></form>
+      <p class="eyebrow">ENGINEERING CONCEPT / SYSTEM SKETCH</p>
+      <h2 id="dialog-title">System sketch</h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <div class="architecture-flow" id="architecture-flow" aria-label="Concept architecture flow"></div>
+      <p class="dialog-footnote">Illustrative design exercise; not a description of a deployed system.</p>
+    </dialog>
+    <noscript><p class="noscript-note">The page content is available, but project diagrams and email draft preparation require JavaScript.</p></noscript>
+  </body>
+</html>
